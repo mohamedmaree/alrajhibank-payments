@@ -1,0 +1,28 @@
+{
+    "name": "maree/alrajhibank-payments",
+    "description": "package to integrate with alrajhai bank payment api باكدج للربط مع خدمات الدفع الالكتروني مع بنك الرجحي السعودي",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mohamed maree",
+            "email": "m7mdmaree26@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "maree\\alrajhibankPayments\\" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "maree\\alrajhibankPayments\\AlrajhibankServiceProvider"
+            ]
+        }
+    }        
+}
+    
+}
