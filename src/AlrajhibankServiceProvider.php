@@ -30,4 +30,3 @@ class AlrajhibankServiceProvider extends ServiceProvider
         );
     }
 }
-}
