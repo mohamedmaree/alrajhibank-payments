@@ -28,6 +28,7 @@ class AlrajhiBank {
         "udf9": null,
         "udf10": null,
         "langid":null}]';
+
         $encrypted = self::encrypt($payment_data,config('alrajhiBank.encryption_key'));
 
         $data =    '[{
@@ -63,7 +64,7 @@ class AlrajhiBank {
 
     //trandata = $request->trandata
     public static function checkoutResponseStatus($trandata =''){
-        $decrypted = self::decrypt($request->trandata, config('alrajhiBank.encryption_key'));
+        $decrypted = self::decrypt($trandata, config('alrajhiBank.encryption_key'));
         $responseData = json_decode($decrypted, true);
         if (isset($responseData[0]['result']) && $responseData[0]['result'] ===  'CAPTURED') {
             return ['key' => 'success' , 'responseData' => $responseData];
