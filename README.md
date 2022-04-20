@@ -42,7 +42,7 @@ $response = AlrajhiBank::checkout($amount = 0.0,$responseURL='',$errorURL='');
 EX: Route::get('show-response-route', 'PaymentsController@paymentresponse')->name('show-response-route'); 
 - create route for error response url 'show-response-error' 
 EX: Route::get('show-response-error', 'PaymentsController@paymentresponseError')->name('show-response-error'); 
-- create function for checkout response 'paymentresponse'
+- create function for checkout response 'paymentresponse' and error 'paymentresponseError'
 - use that function to check if payment failed or success
 
 ## inside 'paymentresponse' and 'paymentresponseError' functions use:
